@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+  
+<html> 
+<head> 
+    <title>Result </title> 
+</head> 
+<body> 
+<h1> Results: </h1> 
+{% if length > 0 %}
+	<p> {{length}} result found </p>
+	{%for key in results%} 
+	 	<h4>
+	 		<a href=/doc/{{key}}> document {{key}} </a>  
+	 	</h4>
+	    <li>{{results[key]}}</li> 
+	    <br/>
+	    <br/>
+	{%endfor%} 
+{% else %}
+	<h3> no result found!</h3>
+{% endif %}
+</body> 
+</html> 
